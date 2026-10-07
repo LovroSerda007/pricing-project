@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Simple pricing plans for a fictional app.">
+  <title>Hello, pricing!</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #1e293b;
+      background: #f5f7fb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+    }
+
+    main {
+      width: min(100% - 2rem, 960px);
+      margin: 0 auto;
+      padding: 4rem 0;
+    }
+
+    header {
+      margin-bottom: 2.5rem;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      color: #172554;
+      font-size: clamp(2rem, 8vw, 3.25rem);
+      letter-spacing: -0.04em;
+    }
+
+    .byline {
+      margin: 0.75rem 0 0;
+      color: #64748b;
+    }
+
+    .plans {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+      align-items: stretch;
+    }
+
+    article {
+      padding: 1.5rem;
+      border: 1px solid #e2e8f0;
+      border-radius: 1rem;
+      background: #fff;
+      box-shadow: 0 8px 24px rgb(15 23 42 / 5%);
+    }
+
+    article.featured {
+      border: 2px solid #4f46e5;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 1.25rem;
+    }
+
+    .price {
+      margin: 1rem 0 1.25rem;
+      color: #172554;
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+    }
+
+    .price span {
+      color: #64748b;
+      font-size: 0.9rem;
+      font-weight: 400;
+      letter-spacing: 0;
+    }
+
+    ul {
+      display: grid;
+      gap: 0.75rem;
+      margin: 0;
+      padding: 0;
+      color: #475569;
+      list-style: none;
+    }
+
+    li::before {
+      content: "✓";
+      margin-right: 0.5rem;
+      color: #4f46e5;
+      font-weight: 700;
+    }
+
+    @media (max-width: 640px) {
+      main {
+        padding: 2.5rem 0;
+      }
+
+      header {
+        margin-bottom: 1.75rem;
+      }
+
+      .plans {
+        grid-template-columns: 1fr;
+        gap: 0.875rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Hello, pricing!</h1>
+      <p class="byline">Lovro Serdarevic</p>
+    </header>
+
+    <section class="plans" aria-label="App pricing plans">
+      <article>
+        <h2>Free</h2>
+        <p class="price">€0 <span>/ month</span></p>
+        <ul>
+          <li>Track up to 3 projects</li>
+          <li>Basic progress reports</li>
+          <li>Community support</li>
+        </ul>
+      </article>
+
+      <article class="featured">
+        <h2>Basic</h2>
+        <p class="price">€8 <span>/ month</span></p>
+        <ul>
+          <li>Track up to 20 projects</li>
+          <li>Weekly progress reports</li>
+          <li>Email support</li>
+        </ul>
+      </article>
+
+      <article>
+        <h2>Pro</h2>
+        <p class="price">€18 <span>/ month</span></p>
+        <ul>
+          <li>Unlimited projects</li>
+          <li>Advanced reports and insights</li>
+          <li>Priority support</li>
+        </ul>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
